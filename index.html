@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="80">
+    <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Amiri:ital,wght@0,400;0,700;1,400;1,700|Readex+Pro:wght@160..700|Roboto+Slab:wght@100..900">
+    <title>Examble</title>
+    <style>
+    
+        form{
+           margin-top: 200px;
+           border-radius: 10px;
+            border: solid 3px rgb(30, 161, 218) ;
+            background: url("01.jpg");
+            box-shadow: 10px 6px 15px rgb(0, 29, 144);
+            color: aliceblue;
+            text-align: center;
+         position: relative;
+        }
+        fieldset{
+          border: solid 3px rgb(162, 227, 255) ;
+          border-radius: 10px;
+          margin: 10px;
+          
+        }
+        legend{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          text-align: center;
+          color: rgb(229, 227, 246);
+          font-size: 2rem;
+          
+          
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            justify-items: center;
+            align-items: center;
+           margin: auto;
+        }
+
+          .sup{
+            margin-top: 10px;
+            color: rgb(255, 255, 255);
+            background: rgb(10, 176, 191);
+            width: 300px;
+            transform: translate(0px,0px);
+            box-shadow: 3px 5px 4px rgb(89, 65, 63);
+            border-radius: 10px;
+            border: rgb(89, 65, 63); ;
+          }
+          .sup:hover{
+           cursor: pointer;
+            background: rgb(78, 210, 243);
+            transform: translate(1.5px,1.5px);
+          }
+          #pa{
+            background: rgb(10, 176, 191);
+           text-align: center;
+            width: 200px;
+            padding: 3px;
+            margin-top: 8px;
+            margin-left: 10px;
+          }
+          #name{
+            background: rgb(10, 176, 191);
+            text-align: center;
+            width: 200px;
+            margin-right: 0px;
+            margin-left: 20px;
+          }
+          #name:hover{
+            background: rgb(141, 232, 240);
+            text-align: center;
+            width: 200px;
+            margin-right: 0px;
+            margin-left: 20px;
+            transform: scale(1.02);
+          }
+          #pa:hover{
+            background: rgb(177, 248, 255);
+           text-align: center;
+            width: 200px;
+            padding: 3px;
+            margin-top: 8px;
+            margin-left: 10px;
+            transform: scale(1.02);
+          }
+    </style>
+</head>
+<?php
+session_start();
+
+setcookie("username" , "monssr", time()+7*24*60*60*1000,"/");
+
+?>
+
+<body>
+    <form action="page2.php" method="get">
+        <fieldset> 
+        <legend >Monsr Website </legend>
+        <label for="name"> Name    :            </label>
+            <input type="text" name="name" id="name" required> <br> 
+            <label for="pa"> Passwrd: </label>
+            <input type="password" name="pa"  id="pa" required>
+            <br>  Gander : <br> 
+        <input type="radio" name="gander" id="Male"  value="male" > male
+      <input type="radio" name="gander" id="fMale"  value="female" > Female
+          <br>
+            <input class="sup" type="submit" value="Send Information" onclick="location.href='page2.html'">
+           
+        </fieldset>
+    </form>
+   
+    
+</body>
+</html>
